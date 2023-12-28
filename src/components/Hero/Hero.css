@@ -1,0 +1,13 @@
+@import "/styles.css";
+
+#sectionHero {
+    background-image: url("https://www.altium.com/v2/sites/default/files/2022-09/s-hero-bg--v2_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 5.5rem;
+    opacity: 0.5;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}

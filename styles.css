@@ -1,0 +1,117 @@
+@import "/src/assets/font-styles/Active_Font_Faces/font_faces.css";
+
+:root {
+
+    /* font sizes START ↓↓↓ */
+
+    --title--font-size: clamp(2.25rem, 2.22rem + 0.16vw, 2.47rem);
+    --h1--font-size: clamp(2.25rem, 2.22rem + 0.16vw, 2.47rem);
+    --h2--font-size: clamp(1.75rem, 1.72rem + 0.16vw, 1.97rem);
+    --h3--font-size: clamp(1.25rem, 1.22rem + 0.16vw, 1.47rem);
+    --general--font-size: clamp(1rem, 0.97rem + 0.16vw, 1.22rem);
+    --small--font-size: clamp(0.8rem, 0.8rem + 0.16vw, 1rem);
+
+    /* font sizes END ↑↑↑ */
+
+    /* main colors, theme colors, card background colors and background colors START ↓↓↓ */
+
+    --white-text: hsl(30, 0%, 100%);
+    --dark-text: rgba(1, 1, 1, 1);
+    --secondary-text: #b0b9c2  /*#aaa6c3*/;
+    --tertiary: #161b22   /*#171233*/;
+                --black-100: #0d1117  /*#100d25*/;
+                --black-200: #090325;
+                --white-100: #f3f3f3;
+
+
+    --box-shadow: 0px 35px 120px -15px #211e35;
+
+    --theme-color--1: #bf8bf3;
+    --theme-color--2: #1FC71F;
+    --theme-color--3: #FF6666;
+    --theme-color--4: #00cccc;
+    --theme-color--5: #FF5F15;
+
+    --green-pink--gradient: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+
+    --background-color--1: hsl(0, 0%, 85%, 1);
+    --background-color--2: hsl(252, 30%, 12.5%); /*#000033*/;
+    --background-color--3: #00050a /*#050816*/;
+
+    --card-background-color--1: hsl(50, 10%, 90%);
+    --card-background-color--2: hsl(251, 29%, 26%);
+    --card-background-color--3: hsl(0, 0%, 8%);
+
+    --main--text--color: var(--white-text);
+    --main--theme--color: var(--theme-color--3);
+    --main--background--color: var(--background-color--3);
+    --main--card-background--color: var(--card-background-color--2);
+
+    /* main colors, theme colors, card background colors and background colors END ↑↑↑ */
+
+
+    /* heights, widths and sizes*/
+
+    --ham-menu-part--height: clamp(calc(0.25rem), calc(0.25rem), calc(0.5rem));
+    --ham-menu-part--width: clamp(calc(1.5rem), calc(2rem), calc(2.5rem));
+    --ham-menu-part-active--before-after--location: clamp(calc(0.5em), calc(0.635em), calc(1em));
+    --hover--border-size: calc(0.12rem + 1px);
+
+
+    /* animations and transitions START ↓↓↓ */
+
+    --navigation--transition: max-height 1.025s cubic-bezier(0.26, -0.01, 0,  1.01);
+
+    /* animations and transitions END ↑↑↑ */
+
+}
+
+*, *::before, *::after {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto-Medium", sans-serif, "Poppins-Regular" !important;
+    max-width: 3000px;
+}
+
+html {
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    background: var(--main--background--color);
+    color: var(--main--text--color);
+    min-width: 300px;
+}
+
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+body.loading {
+    opacity: 0;
+}  
+
+#stars {
+    position: absolute;
+    inset: 0;
+    z-index: -999;
+    max-height: 100%;
+}
+
+#vertical-line-container {
+    position: fixed;
+    left: 1rem;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: "#00cea8";
+    background: var(--green-pink--gradient);
+    background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+    transition: height 0.3s ease-out;
+}
+
+#defaultHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
